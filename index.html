@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@100&display=swap">
+
 </head>
 <body>
 
@@ -45,19 +46,28 @@
 		   employment referals specific to their local unions, 
 		   conviently accesible from anywhere in the world!</p>
 		   <a href='https://primaryselectric.com/admin/'>Register Today</a>
-		   <a href='#'><i class='ri-play-fill'></i> User Tutorial</a>
+		   <a onclick='openPopup();' role="button"><i class='ri-play-fill'></i> User Tutorial</a>
 			
 </div>
 	
 	<div class='preview-img'>
 		<a href='#'><img src='./JMS_version3-removebg-preview.png'></a>
 	</div>
+	
+<!-- First modal dialog -->
+<div class="container">
+	<div class="popup" id='popup_modal'>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/MA8Xe-QRUm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<button type='button' onclick='closePopup()'><i class='ri-close-circle-line'></i></button>
+	</div>
+</div>
+
 </section>
 
 <div class='icons'>
-		<a href='https://www.instagram.com/jmsmap/'><i class='ri-instagram-line'></i></a>
-		<a href='https://www.youtube.com/@JMSMAP/featured'><i class='ri-youtube-line'></i></a>
-		<a href='https://www.facebook.com/profile.php?id=100090311089968&sk=about'><i class='ri-facebook-line'></i></a>
+		<a href='#'><i class='ri-instagram-line'></i></a>
+		<a href='#'><i class='ri-youtube-line'></i></a>
+		<a href='#'><i class='ri-facebook-line'></i></a>
 
 </div>
 
@@ -69,5 +79,18 @@
 
 <!-- custom js link -->
 <script src='js-script.js'></script>
+<script>
+let popup = document.getElementById('popup_modal');
+
+function openPopup(){
+	popup.classList.add('open-popup');
+}
+
+function closePopup(){
+	popup.classList.remove('open-popup');
+}
+
+</script>
+
 </body>
 </html>
